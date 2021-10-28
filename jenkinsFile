@@ -46,29 +46,7 @@ echo err
 
 }
 
-stage('build') {
 
-// Installing Dependencies
-
-sh 'npm install'
-
-}
-
-stage('test') {
-
-try{
-
-sh './node_modules/.bin/nightwatch -e chrome,edge tests'
-
-}
-
-catch (err){
-
-echo err
-
-}
-
-}
 
 stage('end') {
 
